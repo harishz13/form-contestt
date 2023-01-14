@@ -4,19 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <title>Contest Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <div class="box">
-            <input type="text" id="item" autofocus placeholder="write something here...">
-            <ul id="to-do-box">
-                
-            </ul>
+<div class="head">
+    <h2>New Employees</h2>
+</div>
+    
+<div>
+    <form>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputEmail4">Enter name</label>
+            <input type="text" class="form-control" id="inputEmail4" required >
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPassword4">Enter Profession</label>
+            <input type="text" class="form-control" id="inputPassword4" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputAge4">Enter Age</label>
+            <input type="text" class="form-control" id="inputAge4" required>
+          </div>
         </div>
-    </main>
-    <script src="script.js"></script>
+        <button id="btn1">Add User</button>
+    </form>
+</div>
+    
+<table>
+    <thead>
+      <tr>
+        <th>Added Employees</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><p id="demo"></p></td>
+       
+      </tr>
+      <tr>
+        <td><p id="demo2"></p></td>
+      </tr>
+      <tr>
+        <td><p id="demo3"></p></td>
+      </tr>
+    </tbody>
+  </table>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,36 +1,17 @@
-const item = document.querySelector("#item")
-const toDoBox=document.querySelector("#to-do-box")
+const txt1 = document.getElementById('inputEmail4');
+const txt2 = document.getElementById('inputPassword4');
+const txt3 = document.getElementById('inputAge4');
+const btn1 = document.getElementById('btn1');
+const out1 = document.getElementById('demo');
+const out2 = document.getElementById('demo2');
+const out3 = document.getElementById('demo3');
 
-item.addEventListener(
-    "keyup",
-    function(event){
-        if(event.key == "Enter"){
-             addToDo(this.value)
-             this.value=""
+function fun1(event){
+    out1.innerHTML= txt1.value;
+    out2.innerHTML= txt2.value;
+    out3.innerHTML= txt3.value;
+    event.preventDefault()
 
-        }
-    }
-)
+}
 
-    const addToDo = (item) => {
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `
-        ${item}
-        <i class="fas fa-times"></i>
-        ` ; 
-        listItem.addEventListener(
-            "click",
-            function(){
-                this.classList.toggle("done");
-            }
-        )
-        listItem.querySelector("i").addEventListener(
-            "click",
-            function(){
-                 listItem.remove()
-            }
-        )
-        toDoBox.appendChild(listItem)
-
-    }
-
+btn1.addEventListener('click',fun1);
